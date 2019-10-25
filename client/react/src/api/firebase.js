@@ -815,9 +815,9 @@ export const getSettingsFromFbase = () => {
 
 export const saveSettingsToFbase = data => {
   const db = firebase.firestore();
-  db.settings({
-    timestampsInSnapshots: true,
-  });
+//   db.settings({
+//     timestampsInSnapshots: true,
+//   });
 
   data.updatedBy = firebase.auth().currentUser.uid;
   data.updatedAt = dayjs().format('YYYY-MM-DD HH:mm:ss.ms Z');
